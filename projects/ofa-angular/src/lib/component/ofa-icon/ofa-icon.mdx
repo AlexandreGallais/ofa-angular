@@ -1,0 +1,22 @@
+import { Meta, Primary, Controls, IconGallery, IconItem, Story } from '@storybook/blocks';
+import * as Stories from './ofa-icon.stories';
+
+<Meta of={Stories} />
+
+# Icon
+
+```ts
+import { OfaIconComponent } from '@alexandregallais/ofa-angular';
+```
+
+<Primary />
+
+## Input
+
+<Controls />
+
+# Iconography
+
+<IconGallery>
+    <IconItem name="chevron-down"><Story of={Stories.ChevronDown} /></IconItem>
+</IconGallery>

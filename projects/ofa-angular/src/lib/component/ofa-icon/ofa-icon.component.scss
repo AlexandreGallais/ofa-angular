@@ -1,0 +1,13 @@
+:host {
+    display: block;
+    width: var(--ofa-icon-size);
+    min-width: var(--ofa-icon-size);
+    max-width: var(--ofa-icon-size);
+    height: var(--ofa-icon-size);
+    min-height: var(--ofa-icon-size);
+    max-height: var(--ofa-icon-size);
+    background-color: var(--ofa-icon-color);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: var(--ofa-icon-size);
+}
