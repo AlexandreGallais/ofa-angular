@@ -10,7 +10,7 @@
         "lint": "ng lint",
         "storybook": "ng run ofa-angular:storybook",
         "build-storybook": "ng run ofa-angular:build-storybook",
-        "comp": "node script/generate-component.mjs"
+        "comp": "node script/component-generator.mjs"
     },
     "private": true,
     "dependencies": {
