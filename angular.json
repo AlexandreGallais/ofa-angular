@@ -1,0 +1,75 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "ofa-angular": {
+            "projectType": "library",
+            "root": "projects/ofa-angular",
+            "sourceRoot": "projects/ofa-angular/src",
+            "prefix": "",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:ng-packagr",
+                    "options": {
+                        "project": "projects/ofa-angular/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "projects/ofa-angular/tsconfig.lib.prod.json"
+                        },
+                        "development": {
+                            "tsConfig": "projects/ofa-angular/tsconfig.lib.json"
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "tsConfig": "projects/ofa-angular/tsconfig.spec.json",
+                        "polyfills": ["zone.js", "zone.js/testing"],
+                        "karmaConfig": "projects/ofa-angular/karma.conf.js"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-eslint/builder:lint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "projects/ofa-angular/**/*.ts",
+                            "projects/ofa-angular/**/*.html"
+                        ]
+                    }
+                },
+                "storybook": {
+                    "builder": "@storybook/angular:start-storybook",
+                    "options": {
+                        "styles": ["projects/ofa-angular/static/style.scss"],
+                        "configDir": "projects/ofa-angular/.storybook",
+                        "browserTarget": "ofa-angular:build",
+                        "compodoc": false,
+                        "port": 6006
+                    }
+                },
+                "build-storybook": {
+                    "builder": "@storybook/angular:build-storybook",
+                    "options": {
+                        "styles": ["projects/ofa-angular/static/style.scss"],
+                        "configDir": "projects/ofa-angular/.storybook",
+                        "browserTarget": "ofa-angular:build",
+                        "compodoc": false,
+                        "outputDir": "storybook-static"
+                    }
+                }
+            },
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "scss"
+                }
+            }
+        }
+    },
+    "cli": {
+        "schematicCollections": ["@angular-eslint/schematics"]
+    }
+}

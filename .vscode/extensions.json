@@ -1,0 +1,22 @@
+{
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
+    "recommendations": [
+        "formulahendry.auto-rename-tag",
+        "webben.browserslist",
+        "EditorConfig.EditorConfig",
+        "dbaeumer.vscode-eslint",
+        "PeterSchmalfeldt.explorer-exclude",
+        "github.vscode-github-actions",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "ritwickdey.LiveServer",
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "PKief.material-icon-theme",
+        "unifiedjs.vscode-mdx",
+        "zhuangtongfa.material-theme",
+        "ionutvmi.path-autocomplete",
+        "esbenp.prettier-vscode",
+        "stylelint.vscode-stylelint",
+        "angular.ng-template"
+    ]
+}
